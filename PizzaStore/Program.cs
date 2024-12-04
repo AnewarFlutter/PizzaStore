@@ -1,5 +1,8 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models; 
+using Microsoft.EntityFrameworkCore;
+using PizzaStore.Models;
+
+
 var builder = WebApplication.CreateBuilder(args); 
 builder.Services.AddEndpointsApiExplorer(); 
 builder.Services.AddSwaggerGen(c => 
