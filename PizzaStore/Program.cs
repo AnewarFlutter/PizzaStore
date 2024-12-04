@@ -49,7 +49,18 @@ app.MapPut("/pizza/{id}", async (PizzaDb db, Pizza updatepizza, int id) =>
     return Results.NoContent();
 });
 
-
+// Nouvel endpoint pour supprimer une pizza
+app.MapDelete("/pizza/{id}", async (PizzaDb db, int id) =>
+{
+    var pizza = await db.Pizzas.FindAsync(id);
+    if (pizza is null)
+    {
+        return Results.NotFound();
+    }
+    db.Pizzas.Remove(pizza);
+    await db.SaveChangesAsync();
+    return Results.Ok();
+});
 
 app.MapGet("/", () => "Bonjour Sénégal!"); 
 app.Run();
