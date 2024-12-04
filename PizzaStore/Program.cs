@@ -11,7 +11,7 @@ var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "D
 builder.Services.AddDbContext<PizzaDb>(options => options.UseInMemoryDatabase("items"));
 
 builder.Services.AddEndpointsApiExplorer(); 
-builder.Services.AddSwaggerGen(c => 
+builder.Services.AddSwaggerGen(c =>  
 { 
     c.SwaggerDoc("v1", new OpenApiInfo 
     { 
