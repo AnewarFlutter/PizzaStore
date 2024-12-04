@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Ajout de la chaîne de connexion
 var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=Pizzas.db";
 
-// Ajout du contexte de base de données en mémoire
-builder.Services.AddDbContext<PizzaDb>(options => options.UseInMemoryDatabase("items"));
+// Remplacement par SQLite
+builder.Services.AddSqlite<PizzaDb>(connectionString);
 
 builder.Services.AddEndpointsApiExplorer(); 
 builder.Services.AddSwaggerGen(c =>  
