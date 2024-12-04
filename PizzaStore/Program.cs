@@ -35,5 +35,8 @@ app.MapPost("/pizza", async (PizzaDb db, Pizza pizza) =>
     return Results.Created($"/pizza/{pizza.Id}", pizza);
 });
 
+// Nouvel endpoint pour obtenir une pizza par ID
+app.MapGet("/pizza/{id}", async (PizzaDb db, int id) => await db.Pizzas.FindAsync(id));
+
 app.MapGet("/", () => "Bonjour Sénégal!"); 
 app.Run();
