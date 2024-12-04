@@ -27,5 +27,13 @@ app.UseSwaggerUI(c =>
 // Ajout de l'itinéraire "/pizzas"
 app.MapGet("/pizzas", async (PizzaDb db) => await db.Pizzas.ToListAsync());
 
+// Ajout de l'itinéraire POST "/pizza"
+app.MapPost("/pizza", async (PizzaDb db, Pizza pizza) =>
+{
+    await db.Pizzas.AddAsync(pizza);
+    await db.SaveChangesAsync();
+    return Results.Created($"/pizza/{pizza.Id}", pizza);
+});
+
 app.MapGet("/", () => "Bonjour Sénégal!"); 
 app.Run();
