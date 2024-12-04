@@ -38,5 +38,18 @@ app.MapPost("/pizza", async (PizzaDb db, Pizza pizza) =>
 // Nouvel endpoint pour obtenir une pizza par ID
 app.MapGet("/pizza/{id}", async (PizzaDb db, int id) => await db.Pizzas.FindAsync(id));
 
+// Nouvel endpoint pour mettre à jour une pizza
+app.MapPut("/pizza/{id}", async (PizzaDb db, Pizza updatepizza, int id) =>
+{
+    var pizza = await db.Pizzas.FindAsync(id);
+    if (pizza is null) return Results.NotFound();
+    pizza.Nom = updatepizza.Nom;
+    pizza.Description = updatepizza.Description;
+    await db.SaveChangesAsync();
+    return Results.NoContent();
+});
+
+
+
 app.MapGet("/", () => "Bonjour Sénégal!"); 
 app.Run();
