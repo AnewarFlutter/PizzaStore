@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "FkYA7IWdOCdjaRHUAu0IvcZAu2CGmjn327FoYKRkv6KkITlu8GqmLXQBcMMX9XjjZj5Na5VfrBVk14JQcFCVyA==",
+  "dgSpecHash": "QBIyb1MiwBv+Dk9olN9cmrjxEL5FssUcp8jRykG6QLotp1PKd74DN24/5KJgdnbVbmIuFZ5cDYVC1NEeYtaqnA==",
   "success": true,
   "projectFilePath": "C:\\Users\\damal\\Desktop\\Dotnet\\PizzaStore\\PizzaStore.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\damal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\damal\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\damal\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\damal\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\damal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\damal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
   "logs": []
 }
